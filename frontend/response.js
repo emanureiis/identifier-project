@@ -1,12 +1,10 @@
-const url = "http://localhost:8080/identificador/creditos";
+const url = "http://localhost:8080/identificador/dados";
 
 const creditosContainer = document.querySelector("#creditos-container")
 
 async function getAllCreditos() {
     const response = await fetch(url);
-    // console.log(response);
     const data = await response.json(); //pega o Json da resposta recebida
-    // console.log(data)
     data.map((credito) => {
 
         const table = document.createElement("table")

@@ -1,10 +1,10 @@
-package br.com.emanureiis.liquidador.api;
+package br.com.emanureiis.identifier.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LiquidadorApiApplicationTests {
+class IdentifierApiApplicationTests {
 
 	@Test
 	void contextLoads() {

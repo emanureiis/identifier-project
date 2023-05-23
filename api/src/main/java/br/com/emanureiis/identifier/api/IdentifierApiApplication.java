@@ -1,13 +1,13 @@
-package br.com.emanureiis.liquidador.api;
+package br.com.emanureiis.identifier.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class LiquidadorApiApplication {
+public class IdentifierApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LiquidadorApiApplication.class, args);
+		SpringApplication.run(IdentifierApiApplication.class, args);
 	}
 
 }

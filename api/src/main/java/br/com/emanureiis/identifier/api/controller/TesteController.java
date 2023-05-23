@@ -1,4 +1,4 @@
-package br.com.emanureiis.liquidador.api.controller;
+package br.com.emanureiis.identifier.api.controller;
 
 import org.springframework.web.bind.annotation.*;
 

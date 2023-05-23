@@ -1,4 +1,4 @@
-package br.com.emanureiis.liquidador.api.configuration;
+package br.com.emanureiis.identifier.api.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

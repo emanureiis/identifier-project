@@ -1,4 +1,4 @@
-package br.com.emanureiis.liquidador.api.model;
+package br.com.emanureiis.identifier.api.model;
 
 import lombok.Getter;
 import lombok.Setter;
