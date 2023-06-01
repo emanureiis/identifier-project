@@ -1,11 +1,12 @@
-const url = "http://localhost:8080/identificador/dados";
+const url = "http://localhost:8080/identificador/result";
 
 const creditosContainer = document.querySelector("#creditos-container")
 
 async function getAllCreditos() {
     const response = await fetch(url);
-    const data = await response.json(); //pega o Json da resposta recebida
-    data.map((credito) => {
+    const data = await response.json(); 
+    
+    data.map((titles) => {
 
         const table = document.createElement("table")
         const trow = document.createElement("tr")
@@ -22,9 +23,9 @@ async function getAllCreditos() {
         thNome.innerText ='Nome';
         thNaoLiquidado.innerText ='Valor';
         
-        codigo.innerText = credito.codigo;
-        nomeCliente.innerText = credito.nomeCliente;
-        naoLiquidado.innerText = credito.naoLiquidado;
+        codigo.innerText = titles.codigo;
+        nomeCliente.innerText = titles.nomeCliente;
+        naoLiquidado.innerText = titles.naoLiquidado;
         
         table.appendChild(thCodigo);
         table.appendChild(thNome);

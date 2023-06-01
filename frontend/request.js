@@ -1,38 +1,41 @@
 const responseBtn = document.querySelector("#responseBtn");
+
 const formulario = document.querySelector("form");
-const iempresa = document.querySelector("#names");
-const inaoLiquidado = document.querySelector("#value");
-const arquivoInput = document.querySelector("#arquivo");
+const empresa = document.querySelector("#names");
+const naoLiquidado = document.querySelector("#value");
+const pdf = document.querySelector("#arquivo");
 
 function enviar() {
-    var dados = new FormData();
-    dados.append("empresa", iempresa.value);
-    dados.append("naoLiquidado", inaoLiquidado.value);
-    dados.append("arquivo", arquivoInput.files[0]);
+    var data = new FormData();
 
-    fetch("http://localhost:8080/identificador/dados", {
+    data.append("empresa", empresa.value);
+    data.append("naoLiquidado", naoLiquidado.value);
+    data.append("pdf", pdf.files[0]);
+
+    fetch("http://localhost:8080/identificador/request", {
         method: "POST",
-        body: dados
+        body: data
     })
     .then(function (res) { console.log(res) })
     .catch(function (res) { console.log(res) });
 
-    responseBtn.addEventListener('click', () =>  {
-        window.location.href = "/response.html"
-    });
+    // responseBtn.addEventListener('click', () =>  {
+    //     window.location.href = "/response.html"
+    // });
     
 }
 
-function limpar() {
-    iempresa.value = "";
-    inaoLiquidado.value = "";
-    arquivoInput.value = "";
-}
+// function limpar() {
+//     empresa.value = "";
+//     naoLiquidado.value = "";
+//     pdf.value = "";
+// }
 
 formulario.addEventListener('submit', function (event) {
     event.preventDefault();
 
     enviar();
+    // limpar();
 });
 
 
